@@ -16,7 +16,7 @@ public class SlytherinStudent extends HogwartsStudent{
         this.resourcefulness = resourcefulness;
         this.thirstForPower = thirstForPower;
     }
-    @Override
-    protected void
+    //@Override
+    //protected void
 
 }

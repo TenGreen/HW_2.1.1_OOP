@@ -14,14 +14,14 @@ public class GryffindorStudent extends HogwartsStudent {
     }
 
     @Override
-    protected void PrintDescriptionStudent(GryffindorStudent student) {
+    protected void PrintDescriptionStudent() {
         System.out.println("Характеристика студента Gryffindor: ");
-        System.out.println("student.getName() = " + student.getName());
-        System.out.println("super.getWitchcraft() = " + student.getWitchcraft());
-        System.out.println("student.getTransgression() = " + student.getTransgression());
-        System.out.println("student.nobility = " + student.getNobility());
-        System.out.println("student.getHonor() = " + student.getHonor());
-        System.out.println("student.getBravery() = " + student.getBravery());
+        System.out.println("student.getName() = " + this.getName());
+        System.out.println("super.getWitchcraft() = " + this.getWitchcraft());
+        System.out.println("student.getTransgression() = " + this.getTransgression());
+        System.out.println("student.nobility = " + this.getNobility());
+        System.out.println("student.getHonor() = " + this.getHonor());
+        System.out.println("student.getBravery() = " + this.getBravery());
     }
 
     public String getName() {
