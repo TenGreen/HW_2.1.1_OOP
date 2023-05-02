@@ -1,8 +1,28 @@
-public class HogwartsStudent {
+public abstract class HogwartsStudent {
     int witchcraft;
     int transgression;
 
+    protected void PrintDescriptionStudent() {
+    }
+    //protected abstract void PrintDescriptionStudent(GryffindorStudent student);
+
+    public int getWitchcraft() {
+        return witchcraft;
+    }
+
+    public void setWitchcraft(int witchcraft) {
+        this.witchcraft = witchcraft;
+    }
+
+    public int getTransgression() {
+        return transgression;
+    }
+
+    public void setTransgression(int transgression) {
+        this.transgression = transgression;
+    }
 }
+
 /*
 * ## 1 задание
 
@@ -18,6 +38,7 @@ public class HogwartsStudent {
 * в целочисленном эквиваленте от 0 до 100.
 *
 Всем Гриффиндорцам присущи благородство, честь и храбрость.
+*
 Студенты Пуффендуя трудолюбивы, верны, честны.
 *
 Когтевранцы умны, мудры, остроумны и полны творчества.
