@@ -28,6 +28,12 @@ public class slytherinStudent extends hogwartsStudent {
         System.out.println("this.getResourcefulness() = " + this.getResourcefulness());
         System.out.println("this.getThirstForPower() = " + this.getThirstForPower());
     }
+
+    @Override
+    protected int rating() {
+        return (this.witchcraft + this.transgression + this.cunning
+                + this.determination + this.ambition + this.resourcefulness + this.thirstForPower);
+    }
     public int getCunning() {
         return cunning;
     }

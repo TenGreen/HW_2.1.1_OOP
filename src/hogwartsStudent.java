@@ -11,8 +11,15 @@ public abstract class hogwartsStudent {
     }
     protected void printDescriptionStudent() {
     }
-    //protected abstract void PrintDescriptionStudent(GryffindorStudent student);
 
+    //protected abstract void PrintDescriptionStudent(GryffindorStudent student);
+    protected int rating() {
+        return (this.witchcraft + this.transgression);
+    }
+
+    protected void learnBestStudent (hogwartsStudent aSt,hogwartsStudent bSt) {
+
+    }
     public int getWitchcraft() {
         return witchcraft;
     }

@@ -25,6 +25,11 @@ public class kogtevranStudent extends hogwartsStudent {
         System.out.println("this.getWit() = " + this.getWit());
         System.out.println("this.getCreativity() = " + this.getCreativity());
     }
+    @Override
+    protected int rating() {
+        return (this.witchcraft + this.transgression + this.mind + this.wisdom
+        + this.wit + this.creativity);
+    }
 
     public int getMind() {
         return mind;

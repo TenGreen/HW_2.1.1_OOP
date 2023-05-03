@@ -22,7 +22,11 @@ public class puffenduyStudent extends hogwartsStudent {
         System.out.println("this.getLoyalty() = " + this.getLoyalty());
         System.out.println("this.getHonesty() = " + this.getHonesty());
     }
-
+    @Override
+    protected int rating() {
+        return (this.witchcraft + this.transgression + this.diligence
+                + this.loyalty + this.honesty);
+    }
     public int getDiligence() {
         return diligence;
     }
