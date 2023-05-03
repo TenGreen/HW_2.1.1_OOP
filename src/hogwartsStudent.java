@@ -1,8 +1,15 @@
-public abstract class HogwartsStudent {
+public abstract class hogwartsStudent {
+    String name;
     int witchcraft;
     int transgression;
 
-    protected void PrintDescriptionStudent() {
+    protected hogwartsStudent(String name, int witchcraft, int transgression) {
+        this.name = name;
+        this.witchcraft = witchcraft;
+        this.transgression = transgression;
+
+    }
+    protected void printDescriptionStudent() {
     }
     //protected abstract void PrintDescriptionStudent(GryffindorStudent student);
 
@@ -21,8 +28,15 @@ public abstract class HogwartsStudent {
     public void setTransgression(int transgression) {
         this.transgression = transgression;
     }
-}
 
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+}
 /*
 * ## 1 задание
 

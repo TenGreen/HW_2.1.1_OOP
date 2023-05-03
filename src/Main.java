@@ -3,26 +3,42 @@ import java.util.Random;
 public class Main {
 
     public static void main(String[] args) {
-        String [] GryffindorList = new String[] {"DracoMalfoy",
-                "GrahamMontague", "GregoryGoyle"};
-        GryffindorStudent[] GryffindorStudent = new GryffindorStudent[GryffindorList.length];
+        String[] gryffindorList = new String[]{"HarryPotter", "HermioneGranger", " RonWeasley"};
+        gryffindorStudent[] gryffindorStudent = new gryffindorStudent[gryffindorList.length];
 
-        for (int i = 0; i < GryffindorList.length; i++) {
-            GryffindorStudent [i] = new GryffindorStudent(GryffindorList[i], gR100(),
+        String[] slytherinList = new String[]{"DracoMalfoy", "GrahamMontague", "GregoryGoyle"};
+        slytherinStudent[] slytherinStudents = new slytherinStudent[slytherinList.length];
+
+        String[] puffenduyList = new String[]{"ZachariahSmith", "CedricDiggory", "JustinFinchFletchley"};
+        puffenduyStudent[] puffenduyStudents = new puffenduyStudent[puffenduyList.length];
+
+        String[] kogtevranList = new String[]{"ZhouChang", "PadmaPatil", "MarcusBelby"};
+        kogtevranStudent[] kogtevranStudents = new kogtevranStudent[kogtevranList.length];
+
+
+        for (int i = 0; i < gryffindorList.length; i++) { //заполняю массив студентов Гриффиндорф
+
+            //String name = GryffindorList[i];
+            //System.out.println("name = " + name);
+            gryffindorStudent gs = new gryffindorStudent(gryffindorList[i], gR100(),
                     gR100(), gR100(), gR100(),
                     gR100());
+            gs.setName(gryffindorList[i]);
+            gryffindorStudent[i] = gs;
 
+            System.out.println("GryffindorList[i] = " + gryffindorList[i]);
         }
 
-        /*GryffindorStudent HarryPotter = new GryffindorStudent("HarryPotter", gR100(),
-                gR100(), gR100(), gR100(),
-                gR100());
-*/
-        SlytherinStudent DracoMalfoy = new SlytherinStudent("Draco Malfoy", gR100(), gR100(),gR100(),
-                gR100(),gR100(),gR100(), gR100());
+        slytherinStudent DracoMalfoy = new slytherinStudent("Draco Malfoy", gR100(), gR100(), gR100(),
+                gR100(), gR100(), gR100(), gR100());
         //Draco Malfoy GrahamMontague GregoryGoyle
 
-        GryffindorStudent[0].PrintDescriptionStudent();
+        for (gryffindorStudent gryffindorStudent : gryffindorStudent) {
+            gryffindorStudent.printDescriptionStudent();
+            System.out.println();
+        }
+        gryffindorStudent[0].printDescriptionStudent();
+        gryffindorStudent[1].printDescriptionStudent();
 
     }
 
@@ -30,6 +46,7 @@ public class Main {
         Random r = new Random();
         return r.nextInt(100);
     }
+
 
 
 }

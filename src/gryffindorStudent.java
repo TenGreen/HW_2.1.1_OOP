@@ -1,20 +1,20 @@
-public class GryffindorStudent extends HogwartsStudent {
+public class gryffindorStudent extends hogwartsStudent {
     private String name;
     private int nobility;
     private int honor;
     private int bravery;
 
     //HarryPotter HermioneGranger RonWeasley
-    public GryffindorStudent(String name, int witchcraft, int transgression,
+    public gryffindorStudent(String name, int witchcraft, int transgression,
                              int nobility, int honor, int bravery) {
-        super();
+        super(name,witchcraft,transgression);
         this.nobility = nobility;
         this.honor = honor;
         this.bravery = bravery;
     }
 
     @Override
-    protected void PrintDescriptionStudent() {
+    protected void printDescriptionStudent() {
         System.out.println("Характеристика студента Gryffindor: ");
         System.out.println("student.getName() = " + this.getName());
         System.out.println("super.getWitchcraft() = " + this.getWitchcraft());
