@@ -4,18 +4,19 @@ public class SlytherinStudent extends HogwartsStudent {
     private int ambition;
     private int resourcefulness;
     private int thirstForPower;
-    //DracoMalfoy GrahamMontague GregoryGoyle Slytherin
+
 
     public SlytherinStudent(String name, int witchcraft, int transgression,
                             int cunning, int determination, int ambition,
                             int resourcefulness, int thirstForPower) {
-        super(name,witchcraft,transgression);
+        super(name, witchcraft, transgression);
         this.cunning = cunning;
         this.determination = determination;
         this.ambition = ambition;
         this.resourcefulness = resourcefulness;
         this.thirstForPower = thirstForPower;
     }
+
     @Override
     protected void printDescriptionStudent() {
         System.out.println("Характеристика студента Slytherin: ");
@@ -31,9 +32,10 @@ public class SlytherinStudent extends HogwartsStudent {
 
     @Override
     protected int rating() {
-        return (this.witchcraft + this.transgression + this.cunning
-                + this.determination + this.ambition + this.resourcefulness + this.thirstForPower);
+        return (this.witchcraft + this.transgression + this.cunning +
+                this.determination + this.ambition + this.resourcefulness + this.thirstForPower);
     }
+
     public int getCunning() {
         return cunning;
     }
@@ -73,7 +75,6 @@ public class SlytherinStudent extends HogwartsStudent {
     public void setThirstForPower(int thirstForPower) {
         this.thirstForPower = thirstForPower;
     }
-//@Override
-    //protected void
+
 
 }

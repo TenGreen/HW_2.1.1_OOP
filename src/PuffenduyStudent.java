@@ -3,7 +3,6 @@ public class PuffenduyStudent extends HogwartsStudent {
     private int loyalty;
     private int honesty;
 
-    //ZachariahSmith CedricDiggory JustinFinchFletchley
     public PuffenduyStudent(String name, int witchcraft, int transgression,
                             int diligence, int loyalty, int honesty) {
         super(name, witchcraft, transgression);
@@ -22,11 +21,13 @@ public class PuffenduyStudent extends HogwartsStudent {
         System.out.println("this.getLoyalty() = " + this.getLoyalty());
         System.out.println("this.getHonesty() = " + this.getHonesty());
     }
+
     @Override
     protected int rating() {
         return (this.witchcraft + this.transgression + this.diligence
                 + this.loyalty + this.honesty);
     }
+
     public int getDiligence() {
         return diligence;
     }

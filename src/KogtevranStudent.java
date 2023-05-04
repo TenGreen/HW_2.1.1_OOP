@@ -1,9 +1,8 @@
 public class KogtevranStudent extends HogwartsStudent {
-    int mind;
-    int wisdom;
-    int wit;
-    int creativity;
-    //ZhouChang PadmaPatil MarcusBelby kogtevran
+    private int mind;
+    private int wisdom;
+    private int wit;
+    private int creativity;
 
     public KogtevranStudent(String name, int witchcraft, int transgression,
                             int mind, int wisdom, int wit, int creativity) {
@@ -25,10 +24,11 @@ public class KogtevranStudent extends HogwartsStudent {
         System.out.println("this.getWit() = " + this.getWit());
         System.out.println("this.getCreativity() = " + this.getCreativity());
     }
+
     @Override
     protected int rating() {
         return (this.witchcraft + this.transgression + this.mind + this.wisdom
-        + this.wit + this.creativity);
+                + this.wit + this.creativity);
     }
 
     public int getMind() {

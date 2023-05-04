@@ -83,6 +83,7 @@ public class Main {
         }
         return kogtevranStudents;
     }
+
     static void learnBestGryffindorStudent(GryffindorStudent aStudent, GryffindorStudent bStudent) {
         int aRaiting = aStudent.rating();
         int bRaiting = bStudent.rating();
@@ -147,8 +148,6 @@ public class Main {
             System.out.println("Второй студент лучше первого");
         }
     }
-
-
 }
 
 

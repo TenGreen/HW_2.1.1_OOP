@@ -4,8 +4,7 @@ public class GryffindorStudent extends HogwartsStudent {
     private int honor;
     private int bravery;
 
-    //HarryPotter HermioneGranger RonWeasley
-    public GryffindorStudent(String name, int witchcraft, int transgression,
+     public GryffindorStudent(String name, int witchcraft, int transgression,
                              int nobility, int honor, int bravery) {
         super(name, witchcraft, transgression);
         this.nobility = nobility;
