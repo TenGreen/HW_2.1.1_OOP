@@ -1,4 +1,4 @@
-public class slytherinStudent extends hogwartsStudent {
+public class SlytherinStudent extends HogwartsStudent {
     private int cunning;
     private int determination;
     private int ambition;
@@ -6,7 +6,7 @@ public class slytherinStudent extends hogwartsStudent {
     private int thirstForPower;
     //DracoMalfoy GrahamMontague GregoryGoyle Slytherin
 
-    public slytherinStudent(String name, int witchcraft, int transgression,
+    public SlytherinStudent(String name, int witchcraft, int transgression,
                             int cunning, int determination, int ambition,
                             int resourcefulness, int thirstForPower) {
         super(name,witchcraft,transgression);

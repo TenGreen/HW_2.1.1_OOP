@@ -1,9 +1,9 @@
-public abstract class hogwartsStudent {
+public abstract class HogwartsStudent {
     String name;
     int witchcraft;
     int transgression;
 
-    protected hogwartsStudent(String name, int witchcraft, int transgression) {
+    protected HogwartsStudent(String name, int witchcraft, int transgression) {
         this.name = name;
         this.witchcraft = witchcraft;
         this.transgression = transgression;
@@ -12,12 +12,11 @@ public abstract class hogwartsStudent {
     protected void printDescriptionStudent() {
     }
 
-    //protected abstract void PrintDescriptionStudent(GryffindorStudent student);
-    protected int rating() {
+        protected int rating() {
         return (this.witchcraft + this.transgression);
     }
 
-    protected void learnBestStudent (hogwartsStudent aSt,hogwartsStudent bSt) {
+    protected void learnBestStudent (HogwartsStudent aSt, HogwartsStudent bSt) {
 
     }
     public int getWitchcraft() {

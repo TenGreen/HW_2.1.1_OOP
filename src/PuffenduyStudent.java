@@ -1,10 +1,10 @@
-public class puffenduyStudent extends hogwartsStudent {
+public class PuffenduyStudent extends HogwartsStudent {
     private int diligence;
     private int loyalty;
     private int honesty;
 
     //ZachariahSmith CedricDiggory JustinFinchFletchley
-    public puffenduyStudent(String name, int witchcraft, int transgression,
+    public PuffenduyStudent(String name, int witchcraft, int transgression,
                             int diligence, int loyalty, int honesty) {
         super(name, witchcraft, transgression);
         this.diligence = diligence;

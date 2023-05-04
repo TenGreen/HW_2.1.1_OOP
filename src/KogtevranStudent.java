@@ -1,11 +1,11 @@
-public class kogtevranStudent extends hogwartsStudent {
+public class KogtevranStudent extends HogwartsStudent {
     int mind;
     int wisdom;
     int wit;
     int creativity;
     //ZhouChang PadmaPatil MarcusBelby kogtevran
 
-    public kogtevranStudent(String name, int witchcraft, int transgression,
+    public KogtevranStudent(String name, int witchcraft, int transgression,
                             int mind, int wisdom, int wit, int creativity) {
         super(name, witchcraft, transgression);
         this.mind = mind;

@@ -1,71 +1,89 @@
 import java.util.Random;
-import java.util.Scanner;
 
 public class Main {
 
-    //Scanner x = new Scanner(System.in);
-
     public static void main(String[] args) {
+
         String[] gryffindorList = new String[]{"HarryPotter", "HermioneGranger", " RonWeasley"};
-        gryffindorStudents[] gryffindorStudents = new gryffindorStudents[gryffindorList.length];
-
         String[] slytherinList = new String[]{"DracoMalfoy", "GrahamMontague", "GregoryGoyle"};
-        slytherinStudent[] slytherinStudents = new slytherinStudent[slytherinList.length];
-
         String[] puffenduyList = new String[]{"ZachariahSmith", "CedricDiggory", "JustinFinchFletchley"};
-        puffenduyStudent[] puffenduyStudents = new puffenduyStudent[puffenduyList.length];
-
         String[] kogtevranList = new String[]{"ZhouChang", "PadmaPatil", "MarcusBelby"};
-        kogtevranStudent[] kogtevranStudents = new kogtevranStudent[kogtevranList.length];
 
+        GryffindorStudent[] gryffindorStudents = fillArraysStudentsGryffindor(gryffindorList);
+        SlytherinStudent[] slytherinStudents = fillArraysStudentsSlytherin(slytherinList);
+        PuffenduyStudent[] puffenduyStudents = fillArraysStudentsPuffenduy(puffenduyList);
+        KogtevranStudent[] kogtevranStudents = fillArraysStudentsKogtevran(kogtevranList);
 
-        for (int i = 0; i < gryffindorList.length; i++) { //заполняю массив студентов Гриффиндорф
-            gryffindorStudents gs = new gryffindorStudents(gryffindorList[i], gR100(),
-                    gR100(), gR100(), gR100(),
-                    gR100());
-            gs.setName(gryffindorList[i]); //не смог разобраться, почему
-            // при создании нового объекта gryffindorStudents gs
-            //не получается сразу вставлять слово из массива имен студентов gryffindorList
-            // Воспользовался сеттером.
-            gryffindorStudents[i] = gs;
-        }
-
-        for (int i = 0; i < slytherinList.length; i++) { // заполняю массив студентов slytherin
-            slytherinStudent ss = new slytherinStudent(slytherinList[i], gR100(), gR100(), gR100(),
-                    gR100(), gR100(), gR100(), gR100());
-            ss.setName(slytherinList[i]);
-            slytherinStudents[i] = ss;
-        }
-        for (int i = 0; i < puffenduyList.length; i++) { // заполняю массив студентов puffenduy
-            puffenduyStudent ps = new puffenduyStudent(puffenduyList[i], gR100(), gR100(),
-                    gR100(), gR100(), gR100());
-            ps.setName(puffenduyList[i]);
-            puffenduyStudents[i] = ps;
-        }
-        for (int i = 0; i < kogtevranList.length; i++) { // заполняю массив студентов kogtevran
-            kogtevranStudent ks = new kogtevranStudent(kogtevranList[i], gR100(), gR100()
-                    , gR100(), gR100(), gR100(), gR100());
-        }
-
-        for (gryffindorStudents gryffindorStudent : gryffindorStudents) { //печатаю всех студентов gryffindor
+        for (GryffindorStudent gryffindorStudent : gryffindorStudents) {//печатаю всех студентов gryffindor
             gryffindorStudent.printDescriptionStudent();
+            System.out.println();
+        }
+        for (SlytherinStudent student : slytherinStudents) { // печатаю всех студентов Slytherin
+            student.printDescriptionStudent();
+            System.out.println();
+        }
+        for (PuffenduyStudent student : puffenduyStudents) { // печатаю всех студентов Puffenduy
+            student.printDescriptionStudent();
+            System.out.println();
+        }
+        for (KogtevranStudent student : kogtevranStudents) { // печатаю всех студентов Kogtevran
+            student.printDescriptionStudent();
             System.out.println();
         }
 
     }
 
-    static int gR100() {
+    static int R100() {
         Random r = new Random();
         return r.nextInt(100);
     }
 
+    static GryffindorStudent[] fillArraysStudentsGryffindor(String[] name) {
+        GryffindorStudent[] gryffindorStudents = new GryffindorStudent[name.length];
+        for (int i = 0; i < name.length; i++) { //заполняю массив студентов Гриффиндорф
+            GryffindorStudent gs = new GryffindorStudent(name[i], R100(),
+                    R100(), R100(), R100(),
+                    R100());
+            gs.setName(name[i]); //не смог разобраться, почему
+            // при создании нового объекта gryffindorStudents gs
+            //не получается сразу вставлять слово из массива имен студентов gryffindorList
+            // Воспользовался сеттером.
+            gryffindorStudents[i] = gs;
+        }
+        return gryffindorStudents;
+    }
 
-    static void learnBestGryffindorStudent(gryffindorStudents aStudent, gryffindorStudents bStudent) {
-        Scanner x = new Scanner(System.in);
-        System.out.println("Введите номер первого студента");
-        int a = x.nextInt();
-        System.out.println("Введите номер второго студента");
-        int b = x.nextInt();
+    static SlytherinStudent[] fillArraysStudentsSlytherin(String[] name) {
+        SlytherinStudent[] slytherinStudents = new SlytherinStudent[name.length];
+        for (int i = 0; i < name.length; i++) { // заполняю массив студентов slytherin
+            SlytherinStudent ss = new SlytherinStudent(name[i], R100(), R100(), R100(),
+                    R100(), R100(), R100(), R100());
+            ss.setName(name[i]);
+            slytherinStudents[i] = ss;
+        }
+        return slytherinStudents;
+    }
+
+    static PuffenduyStudent[] fillArraysStudentsPuffenduy(String[] name) {
+        PuffenduyStudent[] puffenduyStudents = new PuffenduyStudent[name.length];
+        for (int i = 0; i < name.length; i++) { // заполняю массив студентов puffenduy
+            PuffenduyStudent ps = new PuffenduyStudent(name[i], R100(), R100(),
+                    R100(), R100(), R100());
+            ps.setName(name[i]);
+            puffenduyStudents[i] = ps;
+        }
+        return puffenduyStudents;
+    }
+
+    static KogtevranStudent[] fillArraysStudentsKogtevran(String[] name) {
+        KogtevranStudent[] kogtevranStudents = new KogtevranStudent[name.length];
+        for (int i = 0; i < name.length; i++) { // заполняю массив студентов kogtevran
+            KogtevranStudent ks = new KogtevranStudent(name[i], R100(), R100()
+                    , R100(), R100(), R100(), R100());
+        }
+        return kogtevranStudents;
+    }
+    static void learnBestGryffindorStudent(GryffindorStudent aStudent, GryffindorStudent bStudent) {
         int aRaiting = aStudent.rating();
         int bRaiting = bStudent.rating();
         if (aRaiting == bRaiting) {
@@ -76,15 +94,9 @@ public class Main {
         } else if (aRaiting < bRaiting) {
             System.out.println("Второй студент лучше первого");
         }
-        x.close();
     }
 
-    static void learnBestSlytherinStudent(slytherinStudent aStudent, slytherinStudent bStudent) {
-        Scanner x = new Scanner(System.in);
-        System.out.println("Введите номер первого студента");
-        int a = x.nextInt();
-        System.out.println("Введите номер второго студента");
-        int b = x.nextInt();
+    static void learnBestSlytherinStudent(SlytherinStudent aStudent, SlytherinStudent bStudent) {
         int aRaiting = aStudent.rating();
         int bRaiting = bStudent.rating();
         if (aRaiting == bRaiting) {
@@ -95,15 +107,9 @@ public class Main {
         } else if (aRaiting < bRaiting) {
             System.out.println("Второй студент лучше первого");
         }
-        x.close();
     }
 
-    static void learnBestPuffenduyStudent(puffenduyStudent aStudent, puffenduyStudent bStudent) {
-        Scanner x = new Scanner(System.in);
-        System.out.println("Введите номер первого студента");
-        int a = x.nextInt();
-        System.out.println("Введите номер второго студента");
-        int b = x.nextInt();
+    static void learnBestPuffenduyStudent(PuffenduyStudent aStudent, PuffenduyStudent bStudent) {
         int aRaiting = aStudent.rating();
         int bRaiting = bStudent.rating();
         if (aRaiting == bRaiting) {
@@ -114,15 +120,9 @@ public class Main {
         } else if (aRaiting < bRaiting) {
             System.out.println("Второй студент лучше первого");
         }
-        x.close();
     }
 
-    static void learnBestKogtevranStudent(kogtevranStudent aStudent, kogtevranStudent bStudent) {
-        Scanner x = new Scanner(System.in);
-        System.out.println("Введите номер первого студента");
-        int a = x.nextInt();
-        System.out.println("Введите номер второго студента");
-        int b = x.nextInt();
+    static void learnBestKogtevranStudent(KogtevranStudent aStudent, KogtevranStudent bStudent) {
         int aRaiting = aStudent.rating();
         int bRaiting = bStudent.rating();
         if (aRaiting == bRaiting) {
@@ -133,16 +133,22 @@ public class Main {
         } else if (aRaiting < bRaiting) {
             System.out.println("Второй студент лучше первого");
         }
-        x.close();
     }
-/*
-static void GenerateStudentParаaculty (String[]List, hogwartsStudent[] students) {
-    for (hogwartsStudent student : students) {
-        
+
+    static void learnBestStudentWitchcraftTransgression(HogwartsStudent a, HogwartsStudent b) {
+        int aRaiting = a.rating();
+        int bRaiting = b.rating();
+        if (aRaiting == bRaiting) {
+            System.out.println("Студенты одинаково хороши");
+        }
+        if (aRaiting > bRaiting) {
+            System.out.println("Первый студент лучше второго");
+        } else if (aRaiting < bRaiting) {
+            System.out.println("Второй студент лучше первого");
+        }
     }
+
+
 }
 
- */
-
-}
 

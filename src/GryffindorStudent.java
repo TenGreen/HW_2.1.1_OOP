@@ -1,14 +1,12 @@
-import java.util.Scanner;
-
-public class gryffindorStudents extends hogwartsStudent {
+public class GryffindorStudent extends HogwartsStudent {
     private String name;
     private int nobility;
     private int honor;
     private int bravery;
 
     //HarryPotter HermioneGranger RonWeasley
-    public gryffindorStudents(String name, int witchcraft, int transgression,
-                              int nobility, int honor, int bravery) {
+    public GryffindorStudent(String name, int witchcraft, int transgression,
+                             int nobility, int honor, int bravery) {
         super(name, witchcraft, transgression);
         this.nobility = nobility;
         this.honor = honor;
@@ -25,10 +23,6 @@ public class gryffindorStudents extends hogwartsStudent {
         System.out.println("student.getHonor() = " + this.getHonor());
         System.out.println("student.getBravery() = " + this.getBravery());
     }
-
-
-
-
     @Override
     protected int rating() {
         return (this.getWitchcraft() + this.getTransgression() +
